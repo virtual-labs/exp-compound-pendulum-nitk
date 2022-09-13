@@ -1,1 +1,1 @@
-### Aim of the experiment
+To understand the working of double pendulum system and observe its output responses by varying its parameters.
