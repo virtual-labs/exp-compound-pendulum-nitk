@@ -156,7 +156,7 @@ On solving,
 
 </center>
 
-Where &mu; = 1 + (m<sub>1</sub> + m<sub>2</sub>), [$\ddot θ1$ and $\ddot θ2$](https://github.com/SOLVE-NITK/phase4-civil-labs-nitk.git) are angular accelerations of point masses m<sub>1</sub> and m<sub>2</sub> and [$\dot θ1$ and $\dot θ2$](https://github.com/SOLVE-NITK/phase4-civil-labs-nitk.git) are angular velocities of point masses m<sub>1</sub> and m<sub>2</sub>.
+Where &mu; = 1 + (m<sub>1</sub> + m<sub>2</sub>), $\ddot θ1$ and $\ddot θ2$(https://github.com/SOLVE-NITK/phase4-civil-labs-nitk.git) are angular accelerations of point masses m<sub>1</sub> and m<sub>2</sub> and $\dot θ1$ and $\dot θ2$ are angular velocities of point masses m<sub>1</sub> and m<sub>2</sub>.
 
 To solve the equation of motion for the angles, we can use the Euler method. For using Euler method, we should define a time interval and iterate over time. As time changes, angular acceleration, angular velocity and angle is changed. So, from the values of angular acceleration, velocity and angle at that instant of time, we can calculate the position of the system precisely. 
 Such that,
