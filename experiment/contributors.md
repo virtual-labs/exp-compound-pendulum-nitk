@@ -10,7 +10,7 @@
 
 | SNo. |   Name   |  Institute   |
 | :--: | :------: | :----------: |
-|  1   | GANESH B | MIT, Chennai |
+|  1   | Ganesh B | MIT, Chennai |
 
 ### Content Developers:
 
