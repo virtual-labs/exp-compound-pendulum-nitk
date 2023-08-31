@@ -1,1 +1,1 @@
-To understand the working of double pendulum system and observe its output responses by varying its parameters.
+To visualize torsional oscillations of a two-degree-of-freedom system and find its natural frequencies.

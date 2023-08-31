@@ -3,37 +3,54 @@ function runPage1() {
     image(bg, 0, 0)
     stroke(0);
     fill(0);
-    strokeWeight(1);
+
+    // Drawing State-1: The texts are loaded:
     push();
-    textSize(36);
-    textFont("Comic Sans MS")
-    text('Double Pendulum System',150, 50);
-    // text('Two Degree of Freedom System',150, 50);
+    textSize(24);
+    textFont("Times");
+    text('Torsional System as a Two Degree Of Freedom System',140, 40);
+
     textSize(16);
     text("CONTROLS", 655, 417);
     text("VARIABLES", 655, 107);
     pop();
-    spring1.initialise(l1.inp,l2.inp,a1.inp,m1.inp,a2.inp,m2.inp);
-    spring1.update(t, factor);
-    spring1.show(0, 1, 0);
-    strokeWeight(1);    
-    line (spring1.masscoordinates[0], spring1.masscoordinates[1], position_graph1.graphend[0], position_graph1.graphend[1])
-    line (spring1.masscoordinates[2], spring1.masscoordinates[3], position_graph2.graphend[0], position_graph2.graphend[1])
-    fill(0,0,0);
+
+    // System Initialized,updated:
+    torsional_sys.initialise(T0.inp,w.inp,k1.inp,j1.inp,k2.inp,j2.inp);
+    torsional_sys.update(t, factor);
+    torsional_sys.show(0, 1, 0);
+
+    // Position Graph-1 updated:
+    position_graph1.update(torsional_sys.y1);
+    position_graph1.draw(255, 0,0)
+
+    // position Graph-2 updated:
+    position_graph2.update(torsional_sys.y2);
+    position_graph2.draw(255, 0, 0)
+
+    strokeWeight(0)
+
+    textSize(15);
+    fill(230,154,42);
+    text('ω1 = ' + torsional_sys.natomega1.toFixed(4) + " rad/s", 310, 520);
+    text('ω2 = ' + torsional_sys.natomega2.toFixed(4) + " rad/s", 450, 520);
+    text('ω/ω2 = ' + (torsional_sys.w/torsional_sys.natomega2).toFixed(4) + " rad/s", 310, 480)
+    strokeWeight(0.5);    
+    line(0, 440, 600, 440)
+    line(300,440,300,580)
+    fill(0,0,0)
     textSize(20);
-    // text("Double Pendulum System", 180, 110);
-    l1.draw();
-    l2.draw();
-    a1.draw();
-    m1.draw();
-    a2.draw();
-    m2.draw();
-        button1.draw();
-        if(animation==false){
-        button2.draw();
-        }
-        image(dia, 50,350,150,200);
-        fill(0);
-        strokeWeight(3);
-        arc(spring1.x_equilibrium,spring1.y_equilibrium , 15, 15, 0, PI);
+    // text("FORCED VIBRATION SYSTEM", 115, 110);
+
+    T0.draw();
+    w.draw();
+    k1.draw();
+    k2.draw();
+    j1.draw();
+    j2.draw();
+
+    button1.draw();
+    button2.draw();
+
+    t = t + dt;
 }
