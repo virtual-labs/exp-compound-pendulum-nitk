@@ -5,6 +5,7 @@
 | SNo. |        Name         | Institute |              Department              |
 | :--: | :-----------------: | :-------: | :----------------------------------: |
 |  1   | Dr. K V Gangadharan |   NITK    | Department of Mechanical Engineering |
+|  2   | Dr. Jeyaraj P |   NITK    | Department of Mechanical Engineering |
 
 ### Lab Developers:
 
@@ -19,3 +20,4 @@
 |  1   |  Susheel Kumar   |   NITK    |
 |  2   |  Nagaraj Kamath  |   NITK    |
 |  3   | Shivarama Naveen |   NITK    |
+|  4   | Vincent Paul Veernapu |   NITK    |
