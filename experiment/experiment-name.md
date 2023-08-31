@@ -1,1 +1,1 @@
-## Double Pendulum System
+## Torsional System as Two Degree of Freedom System

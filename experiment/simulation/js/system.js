@@ -1,123 +1,144 @@
 class System  {
-    constructor(x, y, _w, _h, _a1, _a2)   {
+    constructor(x, y, _w, _h)   {
         this.width = _w;
         this.h = _h
         this.x_equilibrium = x;
         this.y_equilibrium = y;
-        this.l1 = 0;
-        this.l2 = 0;
-        this.a1 = _a1*Math.PI/180;
-        this.m1 = 10;
-        this.a2 = _a2*Math.PI/180;
-        this.m2 = 0;
-        this.w1 =0;
-        this.w2 =0;
-        this.x1d = 0;
-        this.x2d = 0;
-        this.x1dd = 0;
-        this.x2dd = 0;
-        this.ar1 = 0;
-        this.ar2 = 0;
-        this.masscoordinates = [];
-        this.a1v=0;
-        this.a2v=0;
-        this.a1a=0.01;
-        this.a2a=0.01;
-        this.g=9.8;
-        this.x1=0;
-        this.y1=0;
-        this.x2=0;
-        this.y2=0;
-        this.k1=0;
-        this.k2=0;
+        this.T0 = 0;
+        this.w = 0;
+        this.k1 = 0;
+        this.j1 = 0;
+        this.k2 = 0;
+        this.j2 = 0;
+        this.natomega1 =0;
+        this.natomega2 =0;
+        this.x1 = 0;
+        this.x2 = 0;
+    } // System Class
 
-    }
-
-    initialise(_l1, _l2, _a1,_m1 ,_a2 ,_m2)  {
+    // Function-1: Initializing the variables and finding the necessary values:
+    initialise(_T0, _w, _k1,_m1 ,_k2 ,_m2)  {
         
-        this.l1 = _l1*1000;
-        this.l2 = _l2*1000;
-        this.k1=_a1*Math.PI/180;
-        this.k2=_a2*Math.PI/180;
-        this.m1 = _m1;
-        this.m2 = _m2;
+        this.T0 = _T0;
+        this.w = _w;
+        this.k1 = _k1;
+        this.j1 = _m1;
+        this.k2 = _k2;
+        this.j2 = _m2;
+
+        // Computuation:
+        this.term1 = ((this.k1+this.k2)*this.j2 + (this.k2)*this.j1)/(this.j1*this.j2);
+        this.term2 = (this.k1*this.k2)/(this.j1*this.j2);
+
+        // Natural Frequencies of j1 and j2:
+       this.natomega1 = (0.5*this.term1 - 0.5*((this.term1**2 -4*this.term2)**0.5))**0.5;
+       this.natomega2 = (0.5*this.term1 + 0.5*((this.term1**2 -4*this.term2)**0.5))**0.5;
+        // this.natomega1 = 0;
+        // this.natomega2 = Math.pow(this.k1*(this.j1 + this.j2)/(this.j1*this.j2) , 0.5);
+        if(Math.abs(this.natomega1-this.w)<=0.1 || Math.abs(this.natomega2-this.w)<=0.1)
+        {
+            if(this.w<this.natomega1 || this.w <this.natomega2)
+            {
+                this.w = this.w+0.05;
+            }
+            else
+            {
+                this.w = this.w-0.05;
+            }
+        }
+
+        //Forced Vibration:
+        this.denom= ((this.j1*this.j2*Math.pow(this.w,4))-((this.j1*this.k2+(this.j2*(this.k1+this.k2)))*Math.pow(this.w,2))+(this.k1*this.k2));
+        // !!!!!Note: Formula for x1 and x2 changed!!
+        this.x1 = ((this.k1+this.k2-this.j2*Math.pow(this.w,2))*this.T0)/this.denom;
+        //x1 changed to T0*(k1+k2-j2*w^2/denom)
+        this.x2 = (this.k1*this.T0)/this.denom;
+
+        // // r-values:
+        // this.r1 = (this.k2)/(-this.j2*(this.natomega1**2)+this.k2);
+        // this.r2 = (this.k2)/(-this.j2*(this.natomega2**2)+this.k2);
+            
+
+        // // x11 and x12 (Coefficients of x1):
+        // this.x1_1 = (this.r2*30 - 30)/(this.r2-this.r1);
+        // this.x1_2 = (-this.r1*30 + 30)/(this.r2-this.r1);
+
+        // // The values of x1 and x2:
+        // this.x1 = this.x1_1*(Math.cos(this.natomega1*t)) + this.x1_2*(Math.cos(this.natomega2*t));
+        // this.x2 = this.r1*this.x1_1*(Math.cos(this.natomega1*t)) + this.r2*this.x1_2*(Math.cos(this.natomega2*t));
     }
 
+    // Function-2: Updating the values of x1 and x2 by multiplying with a multiplying factor(if needed):
     update(t, _mulfact)  {
-        let x=this.a1;
-        let y=this.a2;
-        let muu = 1+(this.m1/this.m2);
-        let num1 = this.g*((Math.sin(y)*Math.cos(x-y))-(muu*Math.sin(x)))
-        let num2 = ((this.l2*this.a2v*this.a2v)+(this.l1*this.a1v*this.a1v*Math.cos(x-y)))*Math.sin(x-y);
-        let den1 = this.l1*(muu-(Math.cos(x-y)*Math.cos(x-y)));
-        this.a1a = (num1-num2)/(den1);
-        let num3 = this.g*muu*((Math.sin(x)*Math.cos(x-y))-Math.sin(y))
-        let num4 = ((muu*this.l1*this.a1v*this.a1v)+(this.l2*this.a2v*this.a2v*Math.cos(x-y)))*Math.sin(x-y);
-        let den2 = this.l2*(muu-(Math.cos(x-y)*Math.cos(x-y)));
-        this.a2a = (num3+num4)/(den2);  
-        this.a1v =this.a1v+(this.a1a*t);
-        this.a2v =this.a2v+(this.a2a*t);
-        this.a1 =x+(this.a1v*t);
-        this.a2=y+(this.a2v*t);
         
-        this.x1=(this.x_equilibrium+(this.l1*Math.sin(this.a1)));
-        this.y1=(this.y_equilibrium+(this.l1*Math.cos(this.a1)));
-        this.x2=(this.x1+(this.l2*Math.sin(this.a2)));
-        this.y2=(this.y1+(this.l2*Math.cos(this.a2)));
-
-        let e=(this.m2*this.g)/this.l2;
-        let f=(this.m1+this.m2)*this.g/this.l1;
-        let b=(((this.m1+this.m2)*e)+(this.m2*f))/(this.m1*this.m2);
-        let c=(e*f)/(this.m1*this.m2);
-        let b2=Math.pow((((this.m1+this.m2)*e)+(this.m2*f))/(this.m1*this.m2),2)
-        let det=Math.pow(b2-(4*c),0.5);
-        this.w2=Math.pow(((b+det)/2),0.5);
-        this.w1=Math.pow(((b-det)/2),0.5);
-        this.ar1= e/(f+e-(this.m1*Math.pow(this.w1,2)));
-        this.ar2= e/(f+e-(this.m1*Math.pow(this.w2,2)));
-        // finding x1 and x2(equation of motion)
-        let r1= this.l1*Math.sin(this.k1);
-        let r2= this.l2*Math.sin(this.k2)
-        this.x2d=(r1-(this.ar2*r2))/(this.ar1-this.ar2);
-        this.x2dd=((this.ar1*r2)-r1)/(this.ar1-this.ar2);
-        this.x1d=this.ar1*this.x2d;
-        this.x1dd=this.ar2*this.x2dd;
-        t=t+dt
+        // Function used for amplifying the x1 & x2 values if needed: (As of now set as 1)
+        // this.y2 = (_mulfact*this.x2);
+        // this.y1 = (_mulfact*this.x1);
+        this.y1 = -(_mulfact*this.x1 * Math.sin(this.natomega1*t));
+        this.y2 = -(_mulfact*this.x2 * Math.sin(this.natomega2*t));
     }
 
+    // Function-3: Drawing the setup:
     show(_stroke, _strockweight, _fill) {
-        push();
+        
+        // Circle-1: (Radius is calculated from the input j1 value)
+        this.radius1 = Math.pow(this.j1*10**2,1/2);
 
-        let wid = spr.width-50;
-        let hei = spr.height-140;
-        var h = 255;
-        strokeWeight(4);
-        stroke(0,0,0);
-        line(this.x_equilibrium-10,this.y_equilibrium, this.x_equilibrium+10,this.y_equilibrium);
-        line(this.x_equilibrium,this.y_equilibrium, this.x1,this.y1);
-        fill(235);
-        line(this.x1,this.y1,this.x2,this.y2);
-        ellipse(this.x1,this.y1, this.m1,this.m1);
-        fill(0);
-        textSize(this.m1/3);
-        strokeWeight(1);
-        text("m1",this.x1-this.m1/3+5,this.y1+3);
-        fill(235);
-        strokeWeight(4);
-        ellipse(this.x2,this.y2, this.m2, this.m2);
-        fill(0);
-        textSize(this.m2/3);
-        strokeWeight(1);
-        text("m2",this.x2-(this.m2/3)+5,this.y2+3);
+        // Circle-2: (Radius is calculated from the input j2 value)
+        this.radius2 = Math.pow(this.j2*10**2,1/2);
+
+        // Stroke, Strokeweight and fill are set according to arguments:
+        stroke(_stroke);
+        strokeWeight(_strockweight);
+        fill(_fill);
+
+        // Drawing State-1: (j2 is drawn first as j2>j1 and we would want j1 to be superimposed on j2)
+        push();
+        textSize(12);
+        fill(255,0,0)
+        translate(this.x_equilibrium ,this.y_equilibrium-90)
+        text("j2",this.radius2 ,this.radius2)
+        rotate(radians(deg2));
+        fill (255,0,0);
+        ellipse(0 ,0, 2*this.radius2, 2*this.radius2)
+        pop();
+
+        // Drawing State-2: (j1 is drawn along with the radial line)
+        push();
+        textSize(12)
+        translate(this.x_equilibrium ,this.y_equilibrium-90)
+        fill(255,200,19);
+        textSize(12)
+        text("j1",this.radius1 ,this.radius1)
+        rotate(radians(deg1));
+        fill(255,200,19);
+        ellipse(0 ,0, 2*this.radius1, 2*this.radius1)
+        stroke("black");
+        line(0,this.radius1,0,0)
+        pop();
+
+        // Drawing State-3: (To make the radial line of j2 visible as it would be overwritten by j1 if included in Drawing State-1)
+        push();
+        translate(this.x_equilibrium ,this.y_equilibrium-90)
+        stroke("blue");
+        rotate(radians(deg2));
+        line(0 , this.radius2,0,0)
+        pop();
+        
+        // The values of deg1 and deg2 are constantly updated: (as show() function is a loop)
+        // deg1 = this.x1_1*(Math.cos(this.natomega1*t)) + this.x1_2*(Math.cos(this.natomega2*t));
+        // deg2 = this.r1*this.x1_1*(Math.cos(this.natomega1*t)) + this.r2*this.x1_2*(Math.cos(this.natomega2*t));
+        deg1 = this.y1
+        deg2 = this.y2
     }
 
+    // Function-4: Defining the function for Dynamic Graph-1:
     static mag_func1(x, obj)  {
 
-        let mu = obj.m1/obj.m2;
+        let mu = obj.j1/obj.j2;
         let temp1 = x;
-        let temp2 = Math.pow(((obj.w2*x)/obj.w1),2);
+        let temp2 = Math.pow(((obj.natomega2*x)/obj.natomega1),2);
         let denom = ((1+mu)*temp2) + Math.pow(temp1,2);
-        
         let solution = (1-Math.pow(temp1,2)) / ((Math.pow(temp1,2)*temp2)-denom+1)
         if (abs(solution)<200){
             return(abs(solution));
@@ -128,21 +149,22 @@ class System  {
          
         
     }
+
+    // Function-5: Defining the function for Dynamic Graph-2:
     static mag_func2(x, obj)  {
-        let mu = obj.m1/obj.m2;
+        let mu = obj.j1/obj.j2;
         let temp1 = x;
-        let temp2 = Math.pow(((obj.w2*x**x)/obj.w1),2);
+        let temp2 = Math.pow(((obj.natomega2*x**x)/obj.natomega1),2);
         let denom = ((1+mu)*temp2) +Math.pow(temp1,2);
-        
         let solution = (1)/ ((Math.pow(temp1,2)*temp2)-denom+1);
+        
+        // let solution = obj.r1*obj.x1_1*(Math.cos(obj.natomega1*t)) + obj.r2*obj.x1_2*(Math.cos(obj.natomega2*t));
         if (abs(solution)<200){
             return(abs(solution));
         }
         else {
             return (200);
         }
-        
-        
         
     }
 

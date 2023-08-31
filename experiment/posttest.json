@@ -2,88 +2,77 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "If the length of both strings gets reduced evenly for same point masses of different initial angles. Then the natural frequencies will:",
+      "question": "For a system torsional vibrations increases with increase in polar moment of inertia.",
       "answers": {
-        "a": "Increased",
-        "b": "Decreased",
-        "c": "Will not be affected",
-        "d": "can’t calculate"
+        "a": "True",
+        "b": "False"
+        
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "If the double pendulum is in moon, then for the same point masses and same length the natural frequencies will:",
-      "answers": {
-        "a": "Increased",
-        "b": "Decreased",
-        "c": "Will not be affected",
-        "d": "can’t calculate"
-      },
-      "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Option b is corect",
+        "b": "It is proportional to square root of polar moment of inertia"
       },
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
     {
-      "question": "If l<sub>1</sub> = 100m; l<sub>2</sub> = 80m; m<sub>1</sub> = m<sub>2</sub> = 35kg; θ<sub>1</sub> =30<sup>o</sup> and θ<sub>2</sub> = 40<sup>o</sup> , Then the natural frequencies of system are:",
+      "question": "Torsional stiffness is directly proportional to angular twist",
       "answers": {
-        "a": "0.040139 Hz and 0.097769 Hz",
-        "b": "0.089932 Hz and 0.097769 Hz",
-        "c": "0.040139 Hz and 0.050432 Hz",
-        "d": "0.057683 Hz and 0.067893 Hz"
+        "a": "True",
+        "b": "False"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Torsional stifnees is not directly proportional to angular twist",
+        "b": "Torsional stiffness is inversly proportional to angular twist"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Torsional stiffness is directly proportional to shear modulus",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "It is the ratio of product of Shear modulus and polar moment of inertia to length",
+        "b": "Option a is correct"
       },
       "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "A torsional vibration occurs, if disc rotate in:",
+      "answers": {
+        "a": "Same Direction",
+        "b": "Opposite Direction",
+        "c": "Both a and b",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "Rotation in same direction does not result in torque",
+        "b": "Rotation in opposite direction results in torque",
+        "c": "Option b is correct",
+        "d": "Option b is correct"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "If l<sub>1</sub> = 100m; l<sub>2</sub> = 80m; m<sub>1</sub> = m<sub>2</sub> = 35kg; θ<sub>1</sub> =30<sup>o</sup> and θ<sub>2</sub> = 40<sup>o</sup>, Then the first mode shape and second mode shape ratio respectively are:",
+      "question": "A two rotor system will have",
       "answers": {
-        "a": "0.4860 and -2.4430",
-        "b": "0.6733 and -2.0806",
-        "c": "0.4806 and -2.0806",
-        "d": "none of the above"
+        "a": "One mode",
+        "b": "Two modes",
+        "c": "Cannot be calculated",
+        "d": "None of the above"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "The system has more than one rotors",
+        "b": "The system has two rotors",
+        "c": "Option b is correct",
+        "d": "Option b is correct"
       },
-      "correctAnswer": "c",
-      "difficulty": "advanced"
-    },
-    {
-      "question": "If l<sub>1</sub> = l<sub>2</sub> =80m; m<sub>1</sub> = m<sub>2</sub> = 40kg; θ<sub>1</sub> = θ<sub>2</sub> = 40<sup>o</sup>, Then the first mode shape and second mode shape ratio respectively are:",
-      "answers": {
-        "a": "0.4142 and -2.4142",
-        "b": "0.4142 and -2.7793",
-        "c": "0.4142 and -2.4242",
-        "d": "0.4234 and -1.5324"
-      },
-      "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
-      },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "intermediate"
     }
   ]

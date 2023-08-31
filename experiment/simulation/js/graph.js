@@ -8,38 +8,32 @@ class Graph {
         this.w = w;
         this.xLabel = xLabel;
         this.yLabel = yLabel;
-        this.graphend = [];
     }
 
     update(value)    {
-        this.wave.push(value);
         if (this.wave.length > this.w) {
-            this.wave = this.wave.slice(2);
-            //this.wave = [];
-            //t = 0.05;
+            this.wave = [];
+            t = 0.05;
         }
+        this.wave.push(value);
     }
     
     delete () {
         this.wave = [];
         t=0.05;
     }
-
     draw(r, g, b)  {
         push();
         let temp_y=[]; 
-        
-
         
         beginShape();
         stroke(r, g, b);
         strokeWeight(2);
         noFill();
-        
         for (let i = 0; i < this.wave.length; i++) {
             if (this.wave[i]>400){
                 for (let i = 0; i < this.wave.length; i++) {
-            temp_y[i]= map(this.wave[i],0,max(this.wave), 0,this.h);
+                    temp_y[i]= map(this.wave[i],0,max(this.wave), 0,this.h);
             
                 }
             vertex(i + this.x, temp_y[i] + this.y);
@@ -47,7 +41,6 @@ class Graph {
             else{
                 vertex(i + this.x, this.wave[i] + this.y)
             }
-            this.graphend = [i+this.x,this.wave[i]+this.y]
         }
         endShape();
 

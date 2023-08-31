@@ -19,8 +19,8 @@ class NumberInput {
 initialise() {
         if (this.initialised) {
             this.input1 = createInput(this.inp);
-            this.input1.size(60, 20);
-            this.input1.position(this.x + this.w - 60, this.y-15);
+            this.input1.size(50, 20);
+            this.input1.position(this.x + this.w - 40, this.y-15);
 
             this.input1.elt.setAttribute("type", "number");
             this.input1.elt.setAttribute("min", this.min.toString());
@@ -35,7 +35,6 @@ initialise() {
                 this.input2.elt.style.position = "absolute";
 
                 this.input2.elt.setAttribute("class", "slider");
-            
             }
             this.initialised = false;
         }
@@ -51,6 +50,7 @@ initialise() {
 
     draw() {
         this.initialise();
+
         if (this.inp != this.input1.value()) {
             position_graph1.delete();
             position_graph2.delete();
@@ -63,8 +63,8 @@ initialise() {
         if (this.ifSlider) {
             
             if (this.inp != this.input2.value()) {
-                //position_graph1.delete();
-                //position_graph2.delete();
+                position_graph1.delete();
+                position_graph2.delete();
                 this.inp = this.input2.value();
                 this.input1.value(this.inp);
             }
@@ -79,18 +79,5 @@ initialise() {
         text(this.label, this.x - 10, this.y - 10);
 
         pop();
-    }
-
-    disable(){
-        
-            // Disable the button
-            this.input1.attribute('disabled', '');
-            this.input2.attribute('disabled', '');
-    }
-    enable(){
-         // Re-enable the button
-        this.input1.removeAttribute('disabled');
-        this.input2.removeAttribute('disabled');
-        
     }
 }
