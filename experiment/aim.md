@@ -1,1 +1,1 @@
-To visualize torsional oscillations of a two-degree-of-freedom system and find its natural frequencies.
+To understand the response characteristics of the double pendulum, by varying the paramenters such as mass, length and angle of the pendulum.

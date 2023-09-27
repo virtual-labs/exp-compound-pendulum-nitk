@@ -1,17 +1,23 @@
-Given Data:
-1. T<sub>0</sub> - Torque (Nm)
-2. &omega; - Input Angular Frequency (rad/s)
-3. k<sub>1</sub> - Stiffness of Disc 1 (Nm/rad)
-4. J<sub>1</sub> - Polar Moment of Inertia of Disc 1 (kgm<sup>2</sup>)
-5. k<sub>2</sub> - Stiffness of Disc 2 (NM/rad)
-6. J<sub>2</sub> - Polar Moment of Inertia Disc 2 (kgm<sup>2</sup>)
+1.	At first page, the animation of double pendulum is displayed as shown below:
+![](images/Procedure/1.png)
 
-The experiment is based on the theory of torsional vibrations of a two-degree-of-freedom system, wherein the discs are represented in terms of their moment of inertia. These oscillations can be changed by varying  T<sub>0</sub>, &omega;, k<sub>1</sub>, J<sub>1</sub>, k<sub>2</sub>, and J<sub>2</sub>. 
+2.	The schematic representation of double pendulum is given as to denote the identity of each variable in variables toolbox.
 
-1. Clicking on the simulation tab will open the simulator with the discs oscillating with default values.
-![Alt text](images/6.png)
-Change the values to observe different responses of the system.
+3.	To change the values of the variables or to go to next page, click  ![](images/Procedure/2.png)  button.
 
-2. Clicking on the graph button will show the frequency response curves
-![Alt text](images/7.png)
-Click on the back button to view the first page.
+4.	To play the animation, click ![](images/Procedure/3.png)  button.
+![](images/Procedure/4.png)
+
+5.	You can change the variables (l<sub>1</sub>, l<sub>2</sub>, θ<sub>1</sub>, θ<sub>2</sub>, m<sub>1</sub>, and m<sub>2</sub>) and conclude your inference according to your convenience.
+
+6.	To go to next page, click ![](images/Procedure/5.png)  button.
+
+7.	At the second page, you will check the two natural frequencies of system and their respective mode shape ratios.
+![](images/Procedure/6.png)
+
+8.	At third page, you will check the mode shapes of the point masses with respect to their mode shape ratio and natural frequencies.
+![](images/Procedure/7.png)
+
+9.	You can change the values of variables in any of the page only if you pause the animation.
+
+10.	To go back to the previous page, click  ![](images/Procedure/8.png)   button.

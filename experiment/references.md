@@ -13,9 +13,9 @@
 <td>Developer : Dr. K V Gangadharan | NITK</br></br>
 Contributors :
 <ul style="list-style-type: none;">
-<li> Ganesh B | 2019507016 | MIT, Chennai </li>
+<li> Ganesh B         | 2019507016 | MIT, Chennai </li>
 <li> Shivarama Naveen | 201ME153 | NITK </li>
-<li> Nagaraj Kamath | NITK </li>
+<li> Nagaraj Kamath   | NITK </li>
 
 </ul></td>
   </tr>
