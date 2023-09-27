@@ -4,7 +4,7 @@
 }
 
 /* The slider itself */
-
+.not-allowed {cursor: not-allowed;}
 .slider {
     -webkit-appearance: none;
     /* Override default CSS styles */
