@@ -2,35 +2,86 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "When studying a double pendulum, what does the term 'bifurcation' refer to?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The process of releasing the pendulum",
+        "b": "A sudden change in behavior due to a small change in initial conditions",
+        "c": "The motion becoming more regular over time",
+        "d": "The synchronization of the two pendulum arms"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What happens when you slightly change the initial conditions of a double pendulum experiment?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The motion remains the same",
+        "b": "The pendulum becomes linear",
+        "c": "The motion becomes unpredictable and diverges",
+        "d": "The pendulum stops moving"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which physical principle governs the motion of a double pendulum?",
+      "answers": {
+        "a": "Newton's first law of motion",
+        "b": "Archimedes' principle",
+        "c": "Conservation of angular momentum",
+        "d": "Heisenberg's uncertainty principle"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What type of energy is conserved in a double pendulum system?",
+      "answers": {
+        "a": "Kinetic energy",
+        "b": "Potential energy",
+        "c": "Both kinetic and potential energy",
+        "d": "Neither kinetic nor potential energy"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What role does gravity play in the behavior of a double pendulum?",
+      "answers": {
+        "a": "Gravity has no effect on a double pendulum.",
+        "b": "Gravity provides the energy needed for oscillations.",
+        "c": "Gravity exerts a constant force, affecting the pendulum's motion.",
+        "d": "Gravity stabilizes the double pendulum."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
