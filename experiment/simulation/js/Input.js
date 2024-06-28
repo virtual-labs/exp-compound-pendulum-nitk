@@ -16,7 +16,7 @@ class NumberInput {
         this.fine_change=fine_change;
     }
 
-initialise() {
+    initialise() {
         if (this.initialised) {
             this.input1 = createInput(this.inp);
             this.input1.size(60, 20);
@@ -48,6 +48,7 @@ initialise() {
         }
         this.initialised = true;
     }
+
 
     draw() {
         this.initialise();
@@ -83,14 +84,14 @@ initialise() {
 
     disable(){
         
-            // Disable the button
-            this.input1.attribute('disabled', '');
-            this.input2.attribute('disabled', '');
-    }
-    enable(){
-         // Re-enable the button
-        this.input1.removeAttribute('disabled');
-        this.input2.removeAttribute('disabled');
-        
-    }
+        // Disable the button
+        // this.input1.attribute('disabled', '');
+        // this.input2.attribute('disabled', '');
+}
+enable(){
+     // Re-enable the button
+    this.input1.removeAttribute('disabled');
+    this.input2.removeAttribute('disabled');
+    
+}
 }
