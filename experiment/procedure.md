@@ -1,4 +1,4 @@
-d### Procedure
+### Procedure
 
 1. Click on the Simulation icon <img src="images/simulation.png" alt="Alt text"> to view the simulation.
 
