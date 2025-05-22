@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "When studying a double pendulum, what does the term 'bifurcation' refer to?",
+      "answers": {
+        "a": "The process of releasing the pendulum",
+        "b": "A sudden change in behavior due to a small change in initial conditions",
+        "c": "The motion becoming more regular over time",
+        "d": "The synchronization of the two pendulum arms"
+      },
+      "explanations": {
+        "a": "The right answer is (b). The process of releasing a pendulum is commonly referred to as “initial release” or “initial displacement.",
+        "b": "Correct, the right answer is (b). The term “bifurcation” in the context of a double pendulum refers to a sudden change in behavior due to a small change in initial conditions. When certain parameters vary, the pendulum's motion can transition from one type of behavior to another, such as from regular oscillations to chaotic or periodic patterns.",
+        "c": "The right answer is (b). When a system exhibits repetitive behavior with a consistent period (such as a pendulum swinging back and forth), it is considered periodic.",
+        "d": "The right answer is (b). The synchronization of the two pendulum arms is known as “coupled oscillation” or “mode coupling.” "
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What happens when you slightly change the initial conditions of a double pendulum experiment?",
+      "answers": {
+        "a": "The motion remains the same",
+        "b": "The pendulum becomes linear",
+        "c": "The motion becomes unpredictable and diverges",
+        "d": "The pendulum stops moving"
+      },
+      "explanations": {
+        "a": "The right answer is (c). When you slightly change the initial conditions of a double pendulum experiment, the motion becomes unpredictable.",
+        "b": "The right answer is (c). Due to its chaotic behavior, even small variations in the initial angles or velocities can lead to significantly different trajectories.",
+        "c": "Correct, the right answer is (c). Even small variations in the initial angles or velocities can lead to significantly different trajectories due to the system’s sensitivity to initial conditions.",
+        "d": "The right answer is (c). Due to its chaotic behavior, even small variations in the initial angles or velocities can lead to significantly different trajectories."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which physical principle governs the motion of a double pendulum?",
+      "answers": {
+        "a": "Newton's first law of motion",
+        "b": "Archimedes' principle",
+        "c": "Conservation of angular momentum",
+        "d": "Heisenberg's uncertainty principle"
+      },
+      "explanations": {
+        "a": "The right answer is (c). This law does not directly apply to the complex behavior of a double pendulum. Instead, the motion of a double pendulum is governed by the conservation of angular momentum.",
+        "b": "The right answer is (c). Archimedes’ principle states that the upward buoyant force exerted on a body immersed in a fluid, whether fully or partially, is equal to the weight of the fluid that the body displaces. It does not belong to vibrations.",
+        "c": "Correct, the right answer is (c). As the pendulums swing, their total angular momentum remains constant, leading to complex and chaotic behavior due to their interdependent motion.",
+        "d": "The right answer is (c). The uncertainty principle primarily applies to microscopic particles at the quantum level, whereas the double pendulum involves macroscopic motion governed by classical mechanics. In the case of the double pendulum, its chaotic behavior is primarily driven by the conservation of angular momentum and the sensitivity to initial conditions, rather than quantum effects."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What type of energy is conserved in a double pendulum system?",
+      "answers": {
+        "a": "Kinetic energy",
+        "b": "Potential energy",
+        "c": "Both kinetic and potential energy",
+        "d": "Neither kinetic nor potential energy"
+      },
+      "explanations": {
+        "a": "The right answer is (d). In a double pendulum system, neither kinetic nor potential energy is conserved. As the pendulums swing, energy is continually exchanged between kinetic and potential forms. ",
+        "b": "The right answer is (d). In a double pendulum system, neither kinetic nor potential energy is conserved. As the pendulums swing, energy is continually exchanged between kinetic and potential forms. ",
+        "c": "The right answer is (d). In a double pendulum system, neither kinetic nor potential energy is conserved. As the pendulums swing, energy is continually exchanged between kinetic and potential forms. ",
+        "d": "Correct, The right answer is (d). In a double pendulum system, neither kinetic nor potential energy is conserved. As the pendulums swing, energy is continually exchanged between kinetic and potential forms."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What role does gravity play in the behavior of a double pendulum?",
+      "answers": {
+        "a": "Gravity has no effect on a double pendulum.",
+        "b": "Gravity provides the energy needed for oscillations.",
+        "c": "Gravity exerts a constant force, affecting the pendulum's motion.",
+        "d": "Gravity stabilizes the double pendulum."
+      },
+      "explanations": {
+        "a": "The right answer is (c). In the behavior of a double pendulum, gravity exerts a constant force, significantly affecting the pendulum’s motion.",
+        "b": "The right answer is (c). The gravitational force acts as a torque, causing the pendulums to swing and creating the oscillatory behavior.",
+        "c": "Correct, the right answer is (c). In the behavior of a double pendulum, gravity exerts a constant force, significantly affecting the pendulum’s motion. The gravitational force acts as a torque, causing the pendulums to swing and creating the oscillatory behavior.",
+        "d": "The right answer is (c). Gravity exerts a constant force, significantly affecting the pendulum’s motion. The gravitational force acts as a torque, causing the pendulums to swing and creating the oscillatory behavior."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}
