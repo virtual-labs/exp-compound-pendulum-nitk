@@ -1,5 +1,7 @@
 let showCodeBlock = true;
 function runPage1() {
+   document.querySelector('#canvas-container').style.display = "block"
+  document.querySelector('.observations').style.display = "none"
   background(255);
   // image(bg, 0, 0);
   stroke(0);
