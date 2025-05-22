@@ -75,11 +75,12 @@ $\left\{ -m_2\omega^2 + \left[ \frac{m_2}{l_2} \right]g \right\} X_2 = \frac{m_2
 </center>
 
 This equation will give,
+
 <center>
 
 <!-- ![](images/9.png) -->
 
-$\frac{X_1}{X_2} = \frac{\frac{m_2}{l_2}g}{-m_1\omega^2+\left[\frac{m_1+m_2}{l_1}+\frac{m_2}{l_2}\right]g}$  
+$\frac{X_1}{X_2} = \frac{\frac{m_2}{l_2}g}{-m_1\omega^2+\left[\frac{m_1+m_2}{l_1}+\frac{m_2}{l_2}\right]g}$    
 $\frac{X_1}{X_2} = \frac{-m_2\omega^2+\left[\frac{m_2}{l_2}\right]g}{\frac{m_2}{l_2}gX_1}$
 
 </center>
@@ -99,6 +100,7 @@ $\omega^4 - [\frac{(m_1+m_2)E + m_2F}{m_1m_2}]\omega^2 + \frac{FE}{m_1m_2} = 0$
 The above equation is quadratic in $\omega^2$ and gives two values of $\omega^2$, and therefore two positive values of 
 $\omega$ corresponding to two natural frequencies $\omega_{n1}$ and $\omega_{n2}$ of the system. The above equation is called the frequency equation since the roots of this equation gives the natural frequencies of the system.
 Considering,
+
 <center> 
 
 <!-- ![](images/23.png) -->
@@ -107,6 +109,7 @@ $m_1 = m_2 = m$
 $l_1 = l_2 = l$
 
 </center>
+
 The above equations become,
 
 <center>
@@ -151,6 +154,7 @@ $w_{n2} = \sqrt{\frac{g}{l}(2+\sqrt2)}$
 </center>
 
 The amplitude ratio of the equations are:
+
 <center>
 
 <!-- ![](images/15.png) -->
@@ -160,8 +164,7 @@ $\frac{X_1}{X_2} = \frac{\frac{m_2}{l_2} g}{-m_1 \omega^2 + \left[ \frac{m_1 + m
 
 <!-- ![](images/16.png) -->
 
-$\frac{X_1}{X_2} = \frac{ -m_2 \omega^2 + \left[ \frac{m_2}{l_2} \right] g }{ \frac{m_2}{l_2} g X_1 }
-$
+$\frac{X_1}{X_2} = \frac{ -m_2 \omega^2 + \left[ \frac{m_2}{l_2} \right] g }{ \frac{m_2}{l_2} g X_1 }$
 
 </center>
 
@@ -187,17 +190,11 @@ The kinetic energy of the system:
 
 <!-- ![](images/18.png) -->
 
-$
-T = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2
-$
+$T = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2$  
 
-$
-T = \frac{1}{2} m_1 (\dot{x}_1^2 + \dot{y}_1^2) + \frac{1}{2} m_2 (\dot{x}_2^2 + \dot{y}_2^2)
-$
+$T = \frac{1}{2} m_1 (\dot{x}_1^2 + \dot{y}_1^2) + \frac{1}{2} m_2 (\dot{x}_2^2 + \dot{y}_2^2)$  
 
-$
-T = \frac{1}{2} m_1 l_1^2 \dot{\theta}_1^2 + \frac{1}{2} m_2 \left[ l_1^2 \dot{\theta}_1^2 + l_2^2 \dot{\theta}_2^2 + 2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2) \right]
-$
+$T = \frac{1}{2} m_1 l_1^2 \dot{\theta}_1^2 + \frac{1}{2} m_2 \left[ l_1^2 \dot{\theta}_1^2 + l_2^2 \dot{\theta}_2^2 + 2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2) \right]$  
 
 
 </center>
@@ -207,24 +204,20 @@ The potential energy of system:
 
 <!-- ![](images/19.png) -->
 
-$
-V = m_1 g y_1 + m_2 g y_2
-$
+$V = m_1 g y_1 + m_2 g y_2$  
 
-$
-V = - (m_1 + m_2) g l_1 \cos\theta_1 - m_2 g l_2 \cos\theta_2
-$
+$V = - (m_1 + m_2) g l_1 \cos\theta_1 - m_2 g l_2 \cos\theta_2$  
 
 
 </center>
 
 The Lagrange equations for $\theta_1$ and $\theta_2$ are,
+
 <center>
 
 <!-- ![](images/21.png) -->
 
-$\frac{d}{dt} \left( \frac{d L}{d \dot{\theta}_l} \right) - \frac{d L}{d \theta_l} = 0
-$
+$\frac{d}{dt} \left( \frac{d L}{d \dot{\theta}_l} \right) - \frac{d L}{d \theta_l} = 0$  
 
 </center>
 
