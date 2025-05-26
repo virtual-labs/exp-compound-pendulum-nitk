@@ -2,37 +2,88 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is a double pendulum?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Two pendulums attached end-to-end",
+        "b": "A pendulum with two strings",
+        "c": "A pendulum with two bobs",
+        "d": "Two pendulums connected at their pivot points"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The right answer is (d). Double pendulum is a combination of two pendulums that are connected at their pivot points.",
+        "b": "The right answer is (d). Double pendulum is a combination of two pendulums that are connected at their pivot points.",
+        "c": "The right answer is (d). Double pendulum is a combination of two pendulums that are connected at their pivot points.",
+        "d": "Correct, The right answer is (d). Double pendulum is a combination of two pendulums that are connected at their pivot points."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following best describes the motion of a double pendulum?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": " Simple harmonic motion",
+        "b": "Circular motion",
+        "c": "Chaotic and unpredictable",
+        "d": "Linear motion"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The right answer is (c). The motion of a double pendulum is best described as chaotic and unpredictable. Unlike simple harmonic motion or linear motion, a double pendulum exhibits intricate behavior due to its sensitivity to initial conditions.",
+        "b": "The right answer is (c). The motion of a double pendulum is best described as chaotic and unpredictable. Unlike simple harmonic motion or linear motion, a double pendulum exhibits intricate behavior due to its sensitivity to initial conditions.",
+        "c": "Correct, the right answer is (c). The motion of a double pendulum is best described as chaotic and unpredictable. Unlike simple harmonic motion or linear motion, a double pendulum exhibits intricate behavior due to its sensitivity to initial conditions.",
+        "d": "The right answer is (c). The motion of a double pendulum is best described as chaotic and unpredictable. Unlike simple harmonic motion or linear motion, a double pendulum exhibits intricate behavior due to its sensitivity to initial conditions."
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How many degrees of freedom does a double pendulum have?",
+      "answers": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
+      },
+      "explanations": {
+        "a": "The right answer is (b). A simple pendulum can have one degree of freedom but not the double pendulum.",
+        "b": "Correct, the right answer is (b). A double pendulum have 2 degrees of freedom.",
+        "c": "The right answer is (b). A pendulum with three bobs that are connected at their pivot points can have one degree of freedom but not the double pendulum.",
+        "d": "The right answer is (b). A pendulum with four bobs that are connected at their pivot points can have one degree of freedom but not the double pendulum."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the primary reason for the chaotic behavior of a double pendulum?",
+      "answers": {
+        "a": "Friction",
+        "b": "Air resistance",
+        "c": "Nonlinearity in its equations of motion",
+        "d": "Equal bob masses"
+      },
+      "explanations": {
+        "a": "The right answer is (c). Friction won't be the primary reason for the chaotic behaviour. Infact, we are assuming friction in the system is negligible.",
+        "b": "The right answer is (c). Air resistance is considered negligible and won't be the primary reason.",
+        "c": "Correct, the right answer is (c). The primary reason for the chaotic behavior of a double pendulum lies in the nonlinearity of its equations of motion. Unlike simple systems with linear behavior, the double pendulum’s coupled differential equations lead to intricate, unpredictable trajectories.",
+        "d": "The right answer is (c). Equal bob mass may reduce the chaotic moment but won't help completely."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In a double pendulum, what is the 'initial condition' that determines its future motion?",
+      "answers": {
+        "a": "The length of the pendulum arms",
+        "b": "The angle at which it is released",
+        "c": "The mass of the bobs",
+        "d": "The gravitational constant"
+      },
+      "explanations": {
+        "a": "The right answer is (b). In a double pendulum, the angle at which it is released serves as the critical initial condition that significantly influences its future motion.",
+        "b": "Correct, the right answer is (b). In a double pendulum, the angle at which it is released serves as the critical initial condition that significantly influences its future motion.",
+        "c": "The right answer is (b). In a double pendulum, the angle at which it is released serves as the critical initial condition that significantly influences its future motion.",
+        "d": "The right answer is (b). In a double pendulum, the angle at which it is released serves as the critical initial condition that significantly influences its future motion."
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
