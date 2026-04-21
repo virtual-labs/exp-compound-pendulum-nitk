@@ -1,0 +1,1 @@
+To understand the response characteristics of the double pendulum, by varying the paramenters such as mass, length and angle of the pendulum.
